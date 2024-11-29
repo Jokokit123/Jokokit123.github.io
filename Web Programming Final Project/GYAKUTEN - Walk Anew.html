@@ -1,0 +1,78 @@
+<html>
+	<!-- HI IM JAD :D Welcome to GYAKUTEN: Walk Anew's OFFICIAL WEBSITE!!!!!-->
+<head>
+	<title> GYAKUTEN: Walk Anew </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" type="text/css" href="GWA.css" title="style" />
+</head>
+
+<body class = "Background">
+	<div id="NavigationBar">
+		<div class = "Left">
+			<a href="#Synopsis">Synopsis</a>
+			<a href="#Structure">Structure</a>
+			<a href="#CharacterInfo">Character Info</a>
+			<a href="#Playlist">Playlist</a>
+		</div>
+		
+		<div class = "Right">
+			<div class = "RightLeft">
+				<div>
+					<button onclick = "MuteMusic()"> <img id = "VolumeIcon" src = "Icons/volume.png" width = "20px" height = "20px"> </button>
+					<button onclick = "PreviousMusic()"> <img id = "BackwardIcon" src = "Icons/backward.png" width = "20px" height = "20px"> </button>
+					<button onclick = "PlayMusic()"> <img id = "PlayPauseIcon" src = "Icons/play.png" width = "20px" height = "20px"> </button>
+					<button onclick = "NextMusic()"> <img id = "ForwardIcon" src = "Icons/forward.png" width = "20px" height = "20px"> </button>
+					
+					<div id = "SettingsList">
+						<button id = "Settings"> <img id = "SettingsIcon" src = "Icons/settings.png" width = "20px" height = "20px"> </button>
+						<div id = "SettingsOptions" class = "SettingsOptionsClass">
+							<button> <img id = "LoopIcon" src = "Icons/loop.png" width = "20px" height = "20px"> </button>
+							<button> <img id = "PlaylistIcon" src = "Icons/playlist.png" width = "20px" height = "20px"> </button>
+							<button> <img id = "ShuffleIcon" src = "Icons/shuffle.png" width = "20px" height = "20px"> </button>
+						</div>
+					</div>
+				</div>
+				
+				<div id = "SongTimeline">
+					<div id = "SongProgress"></div>
+				</div>
+			</div>
+		
+			<div class = "RightRight">
+				<a href="#login">Log In</a>
+				<a href="#signup">Sign Up</a>
+			</div>
+		</div>
+	</div>
+
+    <div class="JadContentStyle">
+        <div id = "Synopsis">
+            <h2>Synopsis</h2>
+            <p>This is the synopsis section.</p>
+        </div>
+
+        <div id = "Structure">
+            <h2>Structure</h2>
+            <p>This is the structure section.</p>
+        </div>
+
+        <div id = "CharacterInfo">
+            <h2>Character Info</h2>
+            <p>This is the character info section.</p>
+        </div>
+
+        <div id = "Playlist">
+            <h2>Playlist</h2>
+            <p>This is the playlist section.</p>
+        </div>
+    </div>
+	<br><br>
+	<audio controls id = "AudioPlayer">
+		<source src = "Tracks/Echoes Of The Salvific Ocean Depths.mp3" type = "audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	
+	<script src = "GWA.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+/*JAD'S NOTES TO SELF: 
+	COLOR PALLET: Glacier Grey - #C5C6C7, Purple Grey - #786F80 or rgb(120, 111, 128), Dark Purple Grey - rgb(72, 67, 77), Light Blue - lightblue*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+h1, h2 {
+    font-weight: normal;
+    font-family: "Century Gothic";
+    margin: 3px;
+    padding: 0;
+}
+.JadContentStyle {
+    font-family: "Century Gothic";
+    color: #009097;
+    padding: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.JadStyle {
+    border: 5px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.Background {
+    position: relative;
+    z-index: 0;
+}
+.Background::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('MAP1.png');
+    background-position: center;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+#NavigationBar {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#NavigationBar .Left, #NavigationBar .Right {
+    display: flex;
+    align-items: center;
+}
+#NavigationBar .Left {
+    flex: 1;
+    justify-content: space-evenly;
+}
+#NavigationBar .Right {
+    flex: 1;
+    justify-content: flex-end;
+}
+#NavigationBar .RightLeft {
+    flex: 3;
+	display: grid;
+    place-items: center;
+}
+#NavigationBar .RightRight {
+    flex: 1;
+    justify-content: flex-end;
+}
+#NavigationBar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.6s, text-shadow 0.6s;
+	padding: 10px 20px;
+}
+#NavigationBar a:hover {
+    color: lightblue;
+    text-shadow: 0 0 10px lightblue, 0 0 20px lightblue;
+}
+button {
+    background: none;
+    border: none;
+	cursor: pointer;
+    padding: 0 5px 0 5px;
+	transition: filter 0.6s;
+}
+button:hover {
+	filter: drop-shadow(0 0 10px lightblue) drop-shadow(0 0 5px lightblue) brightness(3.5) saturate(2);
+}
+#SettingsList {
+    position: relative;
+    display: inline-block;
+}
+.SettingsOptionsClass {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    background-color: rgba(72, 67, 77, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 10;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+#SongTimeline {
+    width: 90%;
+    height: 10px;
+    background: #786F80;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+#SongProgress {
+    height: 100%;
+    width: 0%;
+    background-color: lightblue;
+    transition: width 0.5s ease;
+}
+#Synopsis { background-color: #f0f0f0; }
+#Structure { background-color: #d0f0f0; }
+#CharacterInfo { background-color: #e0f0e0; }
+#Playlist { 
+	background-color: rgba(0, 0, 0, 0.5); 
+	width: 100%;
+	display: grid;
+    place-items: center;
+}
